@@ -1,4 +1,6 @@
-.container header a{
+
+/* Styles for navigation links */
+.nav-link{
     color: #1a0841;
 }
 
@@ -11,6 +13,7 @@
     text-decoration: underline; 
 }
 
+/* Styles for navigation buttons */
 .nav-button button{
     background-color: #1a0841;
     color: #ffad5a;
@@ -22,14 +25,34 @@
     color: #000;
 }
 
+/* Styles for login and sign-up buttons */
+a.login-button, a.sign-up-button{
+    background-color: #1a0841;
+    color: #ffad5a ;
+    border: #1a0841;
+}
+
+a.login-button:hover, a.sign-up-button:hover{
+    background-color: #f4f0fe;
+    color: #000;
+}
+
+/* Center the about us section */
+.about-us{
+    margin: auto;
+}
+
+/* Border styles */
 .border_1{
     border: 1px #000 solid;
 }
 
+/* Adds a bottom margin of 20px */
 .bottom_20{
     margin-bottom: 20px;
 }
 
+/* Styles for main headings */
 .heading_size{
     font-size: 4rem;
     font-weight: 100;
@@ -37,6 +60,7 @@
     margin: 30px;
 }
 
+/* Styles for subheadings */
 .subheading_size{
     font-size: 2rem;
     font-weight: 300;
@@ -45,40 +69,49 @@
     text-align: center;
 }
 
+/* card height 400px */
 .card_400{
     height: 400px;
 }
 
-.gift-set{
-    width: 300px;
-    height: 300px;
-}
-
+/* Styles for card images */
 .card-img-top{
     margin: 5px;
+    border-radius: 10px;
 }
 
+/* Styles for about us section */
+#about{
+    margin: 25px auto;
+    width: 75%;
+}
+
+/* Center text in card body */
 .card-body{
     text-align: center;
 }
 
+/* Adds a margin of 25px for card body headings */
 .card-body h5{
     margin: 25px;
 }
 
-.best-seller-product{
+/* Styles for menu-card product images */
+.menu-card{
     margin: auto;
     height: 250px;
     width: 250px;
 }
 
+
+/* Styles for footer */
 .footer{
     text-align: center;
     padding: 10px;
     margin: 5px;
 }
 
-/* home page */
+/* home page styles*/
 
 .home-card{
     text-align: center;
@@ -90,11 +123,12 @@
 }
 
 
-/* product page */
+/* product page styles */
 
 .product-image {
     max-width: 100%;
     height: auto;
+    background-color: #cec4e8;
 }
 
 .size-button {
@@ -114,13 +148,27 @@
     font-size: 16px;
 }
 
+.add-to-basket-btn:hover,
+.size-button:hover {
+    background-color: #cec4e8;
+    color: black;
+}
+
+body.dark-mode .add-to-basket-btn:hover,
+body.dark-mode .size-button:hover {
+    background-color: #1a0841;
+    color: #cec4e8;
+}
+
 .size-button.active {
     background-color: black;
     color: white;
 }
 
+/* Card styles */
 .card{
     background-color: #f4f0fe;
+    
 }
 .card a{
     text-decoration: none;
@@ -130,9 +178,21 @@
 .card img{
     width: 350px;
     height: 350px;
+    display: block;
+    margin: auto;
 }
 
-/* contact us */
+.add-to-basket-btn{
+    margin: 25px;
+    margin-bottom: 35px ;
+}
+
+/* Styles for gift set images */
+.gift-set{
+    width: 300px;
+    height: 300px;
+}
+/* contact us styles*/
 
 .form-control{
     border: 3px solid #f4f0fe;
@@ -169,6 +229,7 @@
     border-color: #1a0841;
 }
 
+/* FAQ section styles */
 #faq{
     text-align: center;
     margin: 15px;
@@ -197,15 +258,148 @@
     color: #000; 
 }
 
+/* Map styles */
 #map {
     height: 400px; 
     margin: 25px;
 }
 
-@media (max-width: 768px) {
+
+
+/* dark mode styles*/
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f0fe;
+}
+
+header {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header{
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode .nav-link {
+    color: #cec4e8;
+}
+
+body.dark-mode .nav-link:hover {
+    color: pink;
+}
+
+body.dark-mode .add-to-basket-btn {
+    background-color: #cec4e8;
+    color: #000;
+}
+
+body.dark-mode #quantity{
+    background-color: #212121;
+    color: #cec4e8;
+}
+
+body.dark-mode .size-button{
+    background-color: #212121;
+    color: #cec4e8;
+}
+
+body.dark-mode .size-button:active,
+body.dark-mode .size-button:focus
+{
+    background-color: #cec4e8;
+    color: #212121;
+}
+
+body.dark-mode .form-control{
+    border: 3px solid #1a0841;
+}
+
+body.dark-mode .contact-container{
+    border: 5px solid #cec4e8;
+    width: 50%;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode input:focus,
+body.dark-mode textarea:focus{
+    background-color: #212121;
+    color: #cec4e8;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #cec4e8;
+}
+
+body.dark-mode .accordion,
+body.dark-mode .accordion-button{
+    background-color: #1a0841;
+    color: #cec4e8;
+}
+
+body.dark-mode .accordion-body{
+    background-color: #cec4e8;
+    color: #1a0841;
+}
+
+body.dark-mode .nav-link.active,
+body.dark-mode .nav{
+    color: #ffad5a;
+}
+
+body.dark-mode .card{
+    background-color: #1a0841;
+    color: #cec4e8;
+}
+
+img.male-perfume,
+img.female-perfume,
+img.gift-set{
+    border-bottom:  1px solid #1a0841;
+}
+
+body.dark-mode img.male-perfume,
+body.dark-mode img.female-perfume,
+body.dark-mode img.gift-set{
+    border-bottom: 1px solid #cec4e8;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text{
+    color: #cec4e8;
+}
+
+.form-check-input:checked {
+    background-color: #1a0841; 
+    border-color: #cec4e8;
+  }
+
+  .form-check-input {
+    background-color: #cec4e8; 
+    border-color: #1a0841;
+  }
+
+  /* Responsive styles for screens smaller than 1000px */
+  @media (max-width: 1000px) {
+
+    .card-img-top{
+        margin: 0;
+    }
+
+    .nav-button{
+        margin-bottom: 20px;
+    }
+
     .contact-container{
         width: 90%;
     }
+
+    body.dark-mode .contact-container{
+        width: 90%;
+    }
+
     .accordion{
         width: 90%;
     }
@@ -235,16 +429,26 @@
     }
 
     .container .heading_size{
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;    
+        text-align: center; 
+        font-size: 32px;
+        margin: 15px;
 }
 
     .container .subheading_size{
         display: flex;
-        font-size: 12px;
+        font-size: 16px;
         letter-spacing: 0;
         font-weight: bold;
         flex-wrap: wrap;
     }
+
+    .product-details{
+        text-align: center;
+    }
+
+    .product-details p{
+        margin: 15px;
+    }
+
+
 }

@@ -1,3 +1,4 @@
+<!-- Sets up webpage. Links to bootsrap and custom css stylesheet.A favicon that shows in the browser tab -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>For Her</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/about-us/favicon-32x32.png">
 </head>
+<!-- Sets up webpage. Links to bootsra and custom css stylesheet.A favicon that shows in the browser tab -->
 
 <body>
-    <!--Navigation -->
+    <!--Navigation. Website logo shown and linked to homepage of website. -->
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-3 mb-2 mb-md-0">
@@ -18,7 +21,9 @@
               <img src="images/about-us/logo.png" alt="logo" width="100px" height="100px">
             </a>
           </div>
-    
+            <!-- Website logo shown and linked to homepage of website. -->
+
+            <!-- A navigation menu bar with links to the different pages -->
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2">Home</a></li>
             <li><a href="him.html" class="nav-link px-2">For him</a></li>
@@ -26,27 +31,43 @@
             <li><a href="gift.html" class="nav-link px-2">Gift sets</a></li>
             <li><a href="contact.html" class="nav-link px-2">Contact us</a></li>
           </ul>
+            <!-- A navigational menu bar with links to the different pages -->
     
+            <!-- Login and sign-up buttons -->
           <div class="col-md-3 text-end nav-button">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>
+            <a href="login.html" class="btn btn-outline-primary me-2 login-button" >Login</a>
+            <a href="register.html" class="btn btn-primary sign-up-button" >Sign-up</a>
+        </div>
+            <!-- Login and sign-up buttons -->
+
+            <!-- Dark mode switch -->
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="themeSwitch">
+            <label class="form-check-label" for="themeSwitch">Dark Mode</label>
+        </div>
+            <!-- Dark mode switch -->
         </header>
       </div>
     <!--Navigation -->
+
+    <!-- Displays an image of product -->
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <img alt="Main product image of a glass bottle with a white cap, placed on a wooden table with a plant in the background"
+                <img alt="Crystal Bloom"
                     class="product-image" height="500"
-                    src="images/for-her/femperfume3.avif"
+                    src="images/for-her/femperfume3.png"
                     width="500" />
             </div>
-            <div class="col-md-5">
+
+            <!-- Displays product details -->
+            <div class="col-md-5 product-details" >
                 <h2>Crystal Bloom</h2>
                 <p>Pink pepper, Rose, Amber</p>
                 <p>Crystal Bloom is a scent that combines sophistication and timeless beauty, is designed to help you unveil your inner glow. This enchanting scent begins with the spicy warmth of Pink Pepper, followed by a heart of romantic Rose and a base of warm golden Amber. Encased in a gorgeous crystal-like bottle, Crystal Bloom is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Choose Crystal Bloom to reflect your unique glow and leave a lasting impression wherever you go.  </p>
                 <h3 id="price">&#163;50.00</h3>
+
+                <!-- Select size of product -->
                 <p>Size:</p>
                 <div>
                     <button class="btn btn-outline-secondary size-button" data-price="50" data-size="30"
@@ -62,6 +83,8 @@
                         100ml
                     </button>
                 </div>
+
+                <!-- Select quantity of product -->
                 <p>Quantity</p>
                 <div class="input-group mb-3">
                     <button class="btn btn-outline-secondary" id="decrease" type="button">
@@ -72,14 +95,23 @@
                         +
                     </button>
                 </div>
+
+                <!-- Add to basket button -->
                 <button class="add-to-basket-btn" id="add-to-basket">
                     ADD TO BASKET
                 </button>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">&copy; House of Perfumes 2025</div>
+    <!-- Footer -->
+
+    <!-- Bootstrap Js & custom js -->
     <script src="product.js" defer></script>
     <script src="script.js" defer></script>
+    <!-- Bootsrap js and custom js -->
 </body>
 
 </html>
