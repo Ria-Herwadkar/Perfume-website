@@ -13,7 +13,7 @@
 <!-- Sets up webpage. Links to bootsra and custom css stylesheet.A favicon that shows in the browser tab -->
 
 <body>
-    <!--Navigation. Website logo shown and linked to homepage of website. -->
+    <!--Navigation. Website logo shown and linked to homepage of website.-->
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-3 mb-2 mb-md-0">
@@ -21,31 +21,32 @@
               <img src="images/about-us/logo.png" alt="logo" width="100px" height="100px">
             </a>
           </div>
-            <!-- Website logo shown and linked to homepage of website. -->
-
-            <!-- A navigation menu bar with links to the different pages -->
+          <!-- Website logo shown and linked to homepage of website. -->
+           
+          <!-- A navigation menu bar with links to the different pages -->
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2">Home</a></li>
             <li><a href="him.html" class="nav-link px-2">For him</a></li>
             <li><a href="her.html" class="nav-link px-2">For her</a></li>
             <li><a href="gift.html" class="nav-link px-2">Gift sets</a></li>
             <li><a href="contact.html" class="nav-link px-2">Contact us</a></li>
+            <li><a href="cart.html" class="nav-link px-2">Cart</a></li>
           </ul>
-            <!-- A navigational menu bar with links to the different pages -->
+          <!-- A navigational menu bar with links to the different pages -->
     
-            <!-- Login and sign-up buttons -->
+          <!-- Login and sign-up buttons -->
           <div class="col-md-3 text-end nav-button">
             <a href="login.html" class="btn btn-outline-primary me-2 login-button" >Login</a>
             <a href="register.html" class="btn btn-primary sign-up-button" >Sign-up</a>
         </div>
-            <!-- Login and sign-up buttons -->
-
-            <!-- Dark mode switch -->
+          <!-- Login and sign-up buttons -->
+  
+          <!-- Dark mode switch -->
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" id="themeSwitch">
             <label class="form-check-label" for="themeSwitch">Dark Mode</label>
         </div>
-            <!-- Dark mode switch -->
+          <!-- Dark mode switch -->
         </header>
       </div>
     <!--Navigation -->
@@ -70,15 +71,15 @@
                 <!-- Select size of product -->
                 <p>Size:</p>
                 <div>
-                    <button id = "product_price_1" class="btn btn-outline-secondary size-button" data-price="50" data-size="30"
+                    <button class="btn btn-outline-secondary size-button" data-price="50" data-size="30"
                         onclick="selectSize(this)">
                         30ml
                     </button>
-                    <button id = "product_price_2" class="btn btn-outline-secondary size-button" data-price="80" data-size="50"
+                    <button class="btn btn-outline-secondary size-button" data-price="80" data-size="50"
                         onclick="selectSize(this)">
                         50ml
                     </button>
-                    <button id = "product_price_3"class="btn btn-outline-secondary size-button" data-price="120" data-size="100"
+                    <button class="btn btn-outline-secondary size-button" data-price="120" data-size="100"
                         onclick="selectSize(this)">
                         100ml
                     </button>
@@ -111,6 +112,7 @@
 
     <!-- Bootstrap Js & custom js -->
     <script src="js/product.js" defer></script>
+    <script src="js/cart.js" defer></script>
     <script src="js/script.js" defer></script>
     <!-- Bootsrap js and custom js -->
 </body>

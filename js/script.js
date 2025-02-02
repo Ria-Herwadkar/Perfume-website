@@ -36,30 +36,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-// form validation
-
+// === Form Validation (Sign-Up) ===
+// Only run this if a form exists and it contains both a password and a confirm-password field.
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-        // Get the values of the password and confirm password firelds
+    if (form && form.querySelector('input[name="password"]') && form.querySelector('input[name="confirm-password"]')) {
+      form.addEventListener('submit', function(event) {
         const password = form.querySelector('input[name="password"]').value;
         const confirmPassword = form.querySelector('input[name="confirm-password"]').value;
         
-        // Check if the password is longer than 8 characters
         if (password.length <= 8) {
-            alert('Password must be longer than 8 characters.');
-            event.preventDefault(); // Prevent the form from submitting
-
-        // Check if the passwords match
+          alert('Password must be longer than 8 characters.');
+          event.preventDefault();
         } else if (password !== confirmPassword) {
-            alert('Passwords do not match.'); // Prevent the form from submitting
-            event.preventDefault();
+          alert('Passwords do not match.');
+          event.preventDefault();
         } else {
-            alert('Thank you for signing up!'); // Allow the form to submit and display a thank you message
+          alert('Thank you for signing up!');
         }
-    });
-});
+      });
+    }
+  });
 
 
    
@@ -70,25 +67,20 @@ var url_string = window.location.href;
 console.log(url_string);
 console.log ("--------------------")
 
-let url = new URL(url_string);
-
-let productID = url.searchParams.get("productID");
+const url = new URL(window.location.href);
+const productID = url.searchParams.get("productID");
 console.log("product ID = " + productID);
 
 let product_title = document.getElementById("product_title");
-let product_price_1 = document.getElementById("product_price_1");
-let product_price_2 = document.getElementById("product_price_2");
-let product_price_3 = document.getElementById("product_price_3");
 let product_description = document.getElementById("product_description");
 let product_image = document.getElementById("product_image");
 let product_notes = document.getElementById("notes");
+if (productID && product_title && product_description && product_image && product_notes) {
+    
 
 switch (productID) {
     case "male_1":
         product_title.innerHTML = "Ocean Valor";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
         product_image.src = "images/for-him/maleperfume1.png";
         product_description.innerHTML = "Ocean Valor is a bold and refreshing fragrance designed for the modern man. The fragrance begins with fresh sea notes, while the aromatic sophistication of Geranium adds a bold and masculine heart completed with a base of Musk that delivers a warm and sensual finish that resonates with confidence. Encased in a gorgeous crystal-like bottle, Ocean Valor is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion.  Let Ocean Valor reflect your inner strength and leave a lasting impression of refined masculinity.";
         product_notes.innerHTML = "Sea Notes, Geranium, Musk ";
@@ -96,9 +88,7 @@ switch (productID) {
 
     case "male_2":
         product_title.innerHTML = "Noir Essence";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume2.png";
         product_description.innerHTML = "Noir Essence is a fragrance that combines boldness, depth and sophistication. It begins with the sharp, fruity aroma of Blackcurrant, which transitions seamlessly into the earthy sophistication of Patchouli, completed with the clean, warm embrace of White Musk creating a perfectly balanced and lasting impression. Presented in a modern, sophisticated bottle, Noir Essence is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Choose Noir Essence and make every moment unforgettable.";
         product_notes.innerHTML = "Blackcurrant, Patchouli, White Musk ";
@@ -106,9 +96,7 @@ switch (productID) {
 
     case "male_3":
         product_title.innerHTML = "Apex";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume3.png";
         product_description.innerHTML = "Apex is a bold fragrance for the modern man. It begins with the crisp, citrusy brightness of Bergamot, transitioning into the spicy, aromatic allure of Nutmeg and finishes with the smooth, woody richness of Sandalwood, creating a bold and refined scent. Presented in a stylish bottle, Apex is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Apex be your signature scent, reflecting strength, style and elegance.";
         product_notes.innerHTML = "Bergamot, Nutmeg, Sandalwood ";
@@ -116,9 +104,7 @@ switch (productID) {
 
     case "male_4":
         product_title.innerHTML = "Atlas";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume4.png";
         product_description.innerHTML = "Atlas is a sophisticated fragrance inspired by the raw beauty of nature. It begins with the crisp, aromatic freshness of Rosemary, transitioning into the bold, woody richness of Cedarwood and is completed by the smooth, clean elegance of White Musk. Presented in a modern, stylish bottle, Atlas is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. With Atlas, exude confidence and leave a mark of strength and elegance.";
         product_notes.innerHTML = "Rosemary, Cedarwood, White Musk";
@@ -126,9 +112,7 @@ switch (productID) {
 
     case "male_5":
         product_title.innerHTML = "Blue Horizon";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume5.png";
         product_description.innerHTML = "Blue Horizon is a bold and refreshing fragrance for the modern man. It begins with the crisp, refreshing Aquatic Accord, transitioning into the soft, floral touch of Water Lily and finishes with the smooth, clean allure of Musk. Encased in a sleek, blue bottle, Blue Horizon is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. ";
         product_notes.innerHTML = "Aquatic Accord, Water Lily, Musk ";
@@ -136,9 +120,7 @@ switch (productID) {
 
     case "male_6":
         product_title.innerHTML = "Ocean Breeze";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume6.png";
         product_description.innerHTML = "Ocean Breeze is a fragrance that embodies freshness and sophistication. It begins with the crisp, refreshing aroma of Green Apple, blending seamlessly with Jasmine Absolute which adds a layer of sophistication and completed with the deep, marine warmth of Ambergris Accord, leading to a powerful and lasting impression. Presented in a modern bottle, Ocean Breeze is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. With Ocean Breeze, embrace a bold new level of freshness and confidence.";
         product_notes.innerHTML = "Green Apple, Jasmine Absolute, Ambergris Accord ";
@@ -146,9 +128,7 @@ switch (productID) {
 
     case "male_7":
         product_title.innerHTML = "Blue Drift";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume7.png";
         product_description.innerHTML = "Blue Drift is a fragrance that blends freshness, elegance and strength. It begins with the refreshing burst of sea notes, transitioning into the aromatic richness of Geranium and concludes with the smooth, clean Musk base, creating a scent that is both invigorating and refined. Encased in a bold, oceanic blue bottle, Blue Drift is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Blue Drift be your signature scent, reflecting the power of the ocean and the essence of timeless masculinity.";
         product_notes.innerHTML = "Sea notes, Geranium, Musk ";
@@ -156,9 +136,7 @@ switch (productID) {
 
     case "male_8":
         product_title.innerHTML = "Zest Aura";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume8.png";
         product_description.innerHTML = "Zest Aura is a fragrance that blends vibrant freshness with subtle strength. It begins with the refreshing citrus of Sicilian Bergamot, transitioning into the bold, herbal sophistication of Geranium and completed with a smooth base of White Musk that lingers with a clean, masculine finish. Presented in a sleek bottle, Zest Aura is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Zest Aura be your signature scent, leaving a lasting impression of strength and style.";
         product_notes.innerHTML = "Sicilian Bergamot, Geranium, White Musk ";
@@ -166,9 +144,7 @@ switch (productID) {
 
     case "male_9":
         product_title.innerHTML = "Noir Leather";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
+
         product_image.src = "images/for-him/maleperfume9.png";
         product_description.innerHTML = " Noir Leather is a bold and intoxicating fragrance crafted for the modern man. It begins with the spicy warmth of Pink Pepper, followed by a rich, smoky Leather Accord that defines the heart of the scent and completed with the deep warmth of Tobacco Absolute leaving a captivating and masculine finish. Encased in a sleek, masculine bottle, Noir Leather is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Noir Leather define your presence with its bold, luxurious aroma.";
         product_notes.innerHTML = "Pink Pepper, Leather Accord, Tobacco Absolute";
@@ -177,80 +153,72 @@ switch (productID) {
 
     case "female_1":
         product_title.innerHTML = "Eau de Charme ";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume1.webp";
+
+        product_image.src = "images/for-her/femperfume1.png";
         product_description.innerHTML = "Discover the allure of Eau de Charme. This is a captivating fragrance that is designed for the modern woman. A sparkling top note of Bergamo transitions to the soft floral elegance of Jasmine, while a sensual base of Musk adds depth and sophistication to this captivating scent. Encased in a sleep pink bottle, Eau de Charme is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Eau de Charme be your signature scent with its blend of grace, confidence and timeless elegance. ";
         product_notes.innerHTML = "Bergamot, Jasmine, Musk ";
     break;
 
     case "female_2":
         product_title.innerHTML = "Blush Essence ";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume2.webp";
+
+        product_image.src = "images/for-her/femperfume2.png";
         product_description.innerHTML = "Immerse yourself in the vibrant allure of Blush Essence, a fragrance crafted for the woman who embodies graces and sophistication. This scent begins with the refreshing notes of Grapefruit, leading into a soft and powdery heart of Violet, while Cedarwood offers a warm and woody finish that lingers beautifully on your skin. With its elegant bottle and delicate pink bow, Blush Essence is a symbol of refined femininity. Blush Essence is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Make Blush Essence your everyday luxury and celebrate the beauty within you. ";
         product_notes.innerHTML = "Grapefruit, Violet, Cedarwood  ";
     break;
 
+    case "female_3":
+        product_title.innerHTML = "Crystal Bloom";
+
+        product_image.src = "images/for-her/femperfume3.png";
+        product_description.innerHTML = "Velvet Horizon is a fragrance that blends freshness and depth, creating a captivating aroma. This fragrance begins with the vibrant sparkle of Bergamot, followed by the rich floral depth of Tuberose and finishes with the bold, earthy warmth of Oakmoss. Presented in a beautifully designed bottle, Velvet Horizon is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Define your elegance with Velvet Horizon and make every moment extra ordinary.";
+        product_notes.innerHTML = "Pink pepper, Rose, Amber" ;
+    break;
+
     case "female_4":
         product_title.innerHTML = "Velvet Horizon";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume4.jpg";
+
+        product_image.src = "images/for-her/femperfume4.png";
         product_description.innerHTML = "Velvet Horizon is a fragrance that blends freshness and depth, creating a captivating aroma. This fragrance begins with the vibrant sparkle of Bergamot, followed by the rich floral depth of Tuberose and finishes with the bold, earthy warmth of Oakmoss. Presented in a beautifully designed bottle, Velvet Horizon is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Define your elegance with Velvet Horizon and make every moment extra ordinary.";
         product_notes.innerHTML = "Bergamot, Tuberose, Oakmoss" ;
     break;
 
     case "female_5":
         product_title.innerHTML = "Golden Ember ";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume5.avif";
+
+        product_image.src = "images/for-her/femperfume5.png";
         product_description.innerHTML = "Golden Ember is a fragrance that is a blend of luxurious spices and sweetness. The fragrance begins with the bold allure of Cardamom, transitioning into the warm, aromatic heart of Cinnamon and is completed with the soft, comforting embrace of Vanilla. Encased in a sleek and stylish bottle, Golden Ember is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Golden Ember be the fragrance that defines your elegance and allure. ";
         product_notes.innerHTML = "Cardamom, Cinnamon, Vanilla  ";
     break;
 
     case "female_6":
         product_title.innerHTML = "Amber Radiance" ;
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume6.avif";
+
+        product_image.src = "images/for-her/femperfume6.png";
         product_description.innerHTML = "Amber Radiance is the ultimate blend of fresh energy and luxurious warmth. The citrusy zest of Mandarin is perfectly balanced by the delicate floral sweetness of Orange Blossom, while a base of Amber adds a warm golden depth creating a luxurious and lasting aroma. Encased in a radiant and refined bottle, Amber Radiance is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Amber Radiance be your signature scent and leave a radiant impression.";
         product_notes.innerHTML = "Mandarin, Orange Blossom, Amber  ";
     break;
 
     case "female_7":
         product_title.innerHTML = "Luminous Grace ";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume7.jpg";
+
+        product_image.src = "images/for-her/femperfume7.png";
         product_description.innerHTML = "Luminous Grace is a fragrance that shines with feminine beauty and sophistication. It begins with the freshness of Grapefruit, leading into the creamy floral heart of Tuberose with a base of Musk that adds a soft warm finish. Presented in an elegant bottle, Luminous Grace is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. With Luminous Grace, embody timeless beauty and let your presence shine. ";
         product_notes.innerHTML = "Grapefruit, Tuberose, Musk ";
     break;
 
     case "female_8":
         product_title.innerHTML = "Blossom Serenade";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume8.jpg";
+
+        product_image.src = "images/for-her/femperfume8.png";
         product_description.innerHTML = "Blossom Serenade is a fragrance that blends sweetness, elegance and depth. The fragrance begins with the freshness of Strawberry, leading into the delicate floral elegance of Lily of the Valley with a base of smooth, creamy Sandalwood that provides a warm and lasting finish. Presented in a beautifully crafted bottle, Blossom Serenade is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Let Blossom Serenade enhance your natural beauty and leave a lasting impression. ";
         product_notes.innerHTML = "Strawberry, Lily of the Valley, Sandalwood ";
     break;
 
     case "female_9":
         product_title.innerHTML = "Midnight Bloom ";
-        product_price_1.innerHTML = "£50.00";
-        product_price_2.innerHTML = "£80.00";
-        product_price_3.innerHTML = "£120.00"; 
-        product_image.src = "images/for him/femperfume9.jpg";
+
+        product_image.src = "images/for-her/femperfume9.png";
         product_description.innerHTML = " Midnight Bloom is a fragrance that balances freshness and warmth. This scent opens with the luscious sweetness of Blackcurrant, while the delicate floral beauty of Freesia adds a romantic touch, completed with a warm embrace of Tonka Bean, creating a captivating and unforgettable aroma. Encased in a sleek, luxurious bottle, Midnight Bloom is available in 30ml, 50ml and 100 ml sizes, perfect for any occasion. Make Midnight Bloom your signature fragrance, perfect for both everyday luxury and special occasions.";
         product_notes.innerHTML = "Blackcurrant, Freesia, Tonka Bean";
     break;
@@ -325,9 +293,39 @@ switch (productID) {
         product_notes.innerHTML = "N/A";
         break;
 }
+}
 
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    // === Navigation Auth Update ===
+    const navAuthContainer = document.getElementById("navAuth");
+    if (navAuthContainer) {
+      // Debug: Log what we get from localStorage.
+      const loggedIn = localStorage.getItem("loggedIn");
+      console.log("loggedIn:", loggedIn);
+      
+      if (loggedIn === "true") {
+        const username = localStorage.getItem("userEmail");
+        navAuthContainer.innerHTML = `
+          <span class="me-2 user">Welcome, ${username}!</span>
+          <button id="logoutButton" class="btn btn-outline-secondary logout">Logout</button>
+        `;
+        const logoutButton = document.getElementById("logoutButton");
+        if (logoutButton) {
+          logoutButton.addEventListener("click", function() {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("userEmail");
+            window.location.href = "login.html";
+          });
+        }
+      } else {
+        navAuthContainer.innerHTML = `
+          <a href="login.html" class="btn btn-outline-primary me-2 login-button">Login</a>
+          <a href="register.html" class="btn btn-primary sign-up-button">Sign-up</a>
+        `;
+      }
+    }
+  });
+  
 
 
 
