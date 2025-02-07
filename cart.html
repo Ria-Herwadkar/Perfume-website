@@ -10,42 +10,63 @@
 </head>
 <body>
     <!--Navigation. Website logo shown and linked to homepage of website.-->
-    <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <div class="col-md-3 mb-2 mb-md-0 logo">
-            <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <img src="images/about-us/logo.png" alt="logo" width="100px" height="100px">
-            </a>
-          </div>
-          <!-- Website logo shown and linked to homepage of website. -->
-           
-          <!-- A navigation menu bar with links to the different pages -->
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2">Home</a></li>
-            <li><a href="him.html" class="nav-link px-2">For him</a></li>
-            <li><a href="her.html" class="nav-link px-2">For her</a></li>
-            <li><a href="gift.html" class="nav-link px-2">Gift sets</a></li>
-            <li><a href="contact.html" class="nav-link px-2">Contact us</a></li>
-            <li><a href="cart.html" class="nav-link px-2">Cart</a></li>
+   
+    <div class="container bottom_20">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/about-us/logo.png" alt="logo" width="100px" height="100px">
+      </a>
+      <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#toggleMobileMenu"
+      aria-controller="toggleMobileMenu"
+      aria-expanded="false"
+      aria-label="toggle-navigation"
+      >
+
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link px-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="him.html" class="nav-link px-2">For him</a>
+          </li>
+          <li class="nav-item">
+            <a href="her.html" class="nav-link px-2">For her</a>
+          </li>
+          <li class="nav-item">
+            <a href="gift.html" class="nav-link px-2">Gift sets</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link px-2">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link px-2">Cart</a>
+          </li>
+        </ul>
+          <ul class="navbar-nav ms-auto">
+            <li>
+              <div class=" text-end nav-button right_15" id="navAuth">
+                <a href="login.html" class="btn btn-outline-primary me-2 login-button" >Login</a>
+                <a href="register.html" class="btn btn-primary sign-up-button" >Sign-up</a>
+            </div>
+            </li>
+            <li class="nav-item right_20 dark-toggle">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="themeSwitch">
+                <label class="form-check-label" for="themeSwitch">Dark Mode</label>
+              </div>
+            </li>
           </ul>
-          <!-- A navigational menu bar with links to the different pages -->
-    
-          <!-- Login and sign-up buttons -->
-<div class="col-md-3 text-end nav-button" id="navAuth">
-            <a href="login.html" class="btn btn-outline-primary me-2 login-button" >Login</a>
-            <a href="register.html" class="btn btn-primary sign-up-button" >Sign-up</a>
-        </div>
-          <!-- Login and sign-up buttons -->
-  
-          <!-- Dark mode switch -->
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="themeSwitch">
-            <label class="form-check-label" for="themeSwitch">Dark Mode</label>
-        </div>
-          <!-- Dark mode switch -->
-        </header>
       </div>
-    <!--Navigation -->
+      </nav>
+    </div>
+  <!--Navigation -->
 
   <!-- Main Cart Content -->
   <div class="container">
@@ -75,6 +96,20 @@
     </div>
   </div>
 
+  <div class="footer">
+    &copy; House of Perfumes 2025<br><br>
+    <a href="Policies/Ingredients.pdf" target="_blank" class="m-2">Ingredients</a>
+    <span class="m-2"> | </span>
+    <a href="Policies/cosmetic_policies.pdf" target="_blank" class="m-2">Cismetic Policies</a>
+    <span class="m-2"> | </span>
+    <a href="Policies/GDPR.pdf" target="_blank" class="m-2">GDPR Protocol</a>
+    <span class="m-2"> | </span>
+    <a href="Policies/IFRA.pdf" target="_blank" class="m-2">IFRA</a>
+    <span class="m-2"> | </span>
+    <a href="Policies/PETA.pdf" target="_blank" class="m-2">PETA</a>
+    <span class="m-2"> | </span>
+    <a href="https://maps.app.goo.gl/YfiueXkY9V1dsRf8A" target="_blank" class="m-2">Location</a>
+  </div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Cart page functionality -->

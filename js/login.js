@@ -26,6 +26,7 @@ if (loginForm) {
       window.location.href = "index.html";
     } else {
       // If the credentials don't match, show an error message.
+      errorMessage.style.color = "red";
       errorMessage.textContent = "Invalid email or password. Please try again.";
     }
   });
@@ -51,4 +52,37 @@ if (navAuthContainer) {
       <a href="register.html" class="btn btn-primary sign-up-button">Sign-up</a>
     `;
   }
+}
+// Registration Validation
+const registerForm = document.getElementById("registerForm");
+const regErrorMessage = document.getElementById("regErrorMessage");
+
+if (registerForm) {
+  registerForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Retrieve values from the registration form
+    const firstName = document.getElementById("firstName").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    // Basic validation for first name and email
+    if (!firstName) {
+      regErrorMessage.style.color = "red";
+      regErrorMessage.textContent = "First name is required.";
+      return;
+    }
+
+    if (!email || !email.includes("@")) {
+      regErrorMessage.style.color = "red";
+      regErrorMessage.textContent = "A valid email is required.";
+      return;
+    }
+
+    regErrorMessage.textContent = "";
+
+    console.log("Registration successful:", { firstName, email });
+    
+    // Example redirect after registration
+    window.location.href = "login.html";
+  });
 }

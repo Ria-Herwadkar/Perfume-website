@@ -36,28 +36,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// === Form Validation (Sign-Up) ===
-// Only run this if a form exists and it contains both a password and a confirm-password field.
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    if (form && form.querySelector('input[name="password"]') && form.querySelector('input[name="confirm-password"]')) {
-      form.addEventListener('submit', function(event) {
-        const password = form.querySelector('input[name="password"]').value;
-        const confirmPassword = form.querySelector('input[name="confirm-password"]').value;
-        
-        if (password.length <= 8) {
-          alert('Password must be longer than 8 characters.');
-          event.preventDefault();
-        } else if (password !== confirmPassword) {
-          alert('Passwords do not match.');
-          event.preventDefault();
-        } else {
-          alert('Thank you for signing up!');
-        }
-      });
-    }
-  });
+const form = document.getElementById('register-form');
+const firstNameField = document.getElementById('first-name');
+const emailField = document.getElementById('email');
+const phoneField = document.getElementById('phone');
+const passwordField = document.getElementById('password');
+const confirmPasswordField = document.getElementById('confirm-password');
 
+if (form && firstNameField && emailField && phoneField && passwordField && confirmPasswordField) {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const firstName = firstNameField.value.trim();
+        const email = emailField.value.trim();
+        const phone = phoneField.value.trim();
+        const password = passwordField.value;
+        const confirmPassword = confirmPasswordField.value;
+
+        // Validate First Name.
+        if (firstName === "") {
+            alert("First name is required.");
+            return;
+        }
+
+        // Validate Email contains '@'.
+        if (!email.includes('@')) {
+            alert("Email address must contain '@'.");
+            return;
+        }
+
+        // Validate Phone Number: must start with +44 and followed by 10 digits.
+        const ukPhoneRegex = /^\+44\d{10}$/;
+        if (!ukPhoneRegex.test(phone)) {
+            alert("Phone number must be a valid UK number starting with +44 followed by 10 digits.");
+            return;
+        }
+
+        // Validate password length.
+        if (password.length <= 8) {
+            alert('Password must be longer than 8 characters.');
+            return;
+        }
+
+        // Validate Passwords match.
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return;
+        }
+
+        alert('Thank you for signing up!');
+    });
+}
 
    
 
@@ -325,7 +353,18 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
+
+
+//   const send_emailbutton = document.getElementById("send_email");
+//   send_emailbutton.addEventListener("click", function() {
+// alert("clicked!!!") left in to see whether the submit button has been clicked or not. It also stops the flow of code to see if the code is working or not.
+//     console.log("Full Name: " + document.getElementById("fullName").value);
+//     console.log("Email: " + document.getElementById("email").value);
+//     console.log("Phone: " + document.getElementById("phone").value);
+//     console.log("Message: " + document.getElementById("message").value);
+//   });
   
+
 
 
 
