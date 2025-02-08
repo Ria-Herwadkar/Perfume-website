@@ -110,7 +110,7 @@
             </div>
             <!-- Custom email link and submit button -->
             <a id="send_email" href="https://mail.google.com/mail/?view=cm&fs=1&to=L39773396@student.ua92.ac.uk" target="_blank" onclick="event.preventDefault(); event.stopPropagation(); window.open(this.href, '_blank');">Send email</a>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="contact-button" type="submit" class="btn btn-primary">Submit</button>
         </form>
         
     </div>
@@ -231,8 +231,8 @@
     <script src="js/leaflet.js" defer></script>
     <script src="js/script.js" defer></script>
      <!-- Custom JavaScript to handle the email button click event -->
-    <script>
-      document.getElementById("send_email").addEventListener("click", function(event) {
+     <script>
+      document.getElementById("contact-button").addEventListener("click", function(event) {
           event.preventDefault(); // Prevent form submission
           console.log("Button clicked!");
           console.log("Full Name: " + document.getElementById("fullName").value);

@@ -491,6 +491,8 @@ body.dark-mode .card-text {
     color: #000; /* Changes the text color on hover */
 }
 
+/* Styles for footer */
+
 .footer a {
     color: #cec4e8; /* Sets the text color */
     text-decoration: none; /* Removes text decoration */
