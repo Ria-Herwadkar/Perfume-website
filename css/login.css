@@ -31,45 +31,49 @@ header h1{
 
 /* Section styles */
 section {
-    width: 100%;
-    position: relative;
-    z-index: 2; 
-    background: rgba(111, 100, 173, 0.85); 
-    color: #3a39393b; 
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 500px;
-    margin: 40px auto;
-    text-align: center;
-    height: 450px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Sets the width to 100% */
+    position: relative; /* Positions the section relative to its normal position */
+    z-index: 2; /* Sets the stack order */
+    background: rgba(111, 100, 173, 0.85); /* Sets the background color with transparency */
+    color: #3a39393b; /* Sets the text color */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+    padding: 20px; /* Adds padding inside the section */
+    max-width: 500px; /* Sets the maximum width */
+    margin: 40px auto; /* Centers the section horizontally and adds vertical margin */
+    text-align: center; /* Centers the text */
+    height: 450px; /* Sets the height */
+    flex-wrap: wrap; /* Allows the content to wrap */
+    display: flex; /* Uses flexbox layout */
+    justify-content: center; /* Centers the content horizontally */
   }
   
-  /* blur  background effect */
+  /* blur background effect for login section */
   #loginSection::before{
     background-image: url("/images/background-image/login.jpg");
     background-size: cover;
     background-position: center center;
   }
 
+  /* blur background effect for register section */
   #registerSection::before{
     background-image: url("/images/background-image/register.jpg");
     background-size: cover;
     background-position: center center;
   }
-  section::before {
-    content: '';
-    position: absolute;
-    top: -10px; 
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: blur(10px);
-    border-radius: 10px;
-    z-index: -1;
+  
+  
+/* Common blur background effect for sections */
+section::before {
+  content: ''; /* Adds an empty content */
+  position: absolute; /* Positions the pseudo-element absolutely */
+  top: -10px; /* Positions 10px above the top */
+  right: -10px; /* Positions 10px to the right */
+  bottom: -10px; /* Positions 10px below the bottom */
+  left: -10px; /* Positions 10px to the left */
+  filter: blur(10px); /* Applies a blur effect */
+  border-radius: 10px; /* Rounds the corners */
+  z-index: -1; /* Places the pseudo-element behind the section */
   }
 
   /* Section heading styles */
@@ -78,54 +82,58 @@ section {
   }
   
   /* Form input styles */
-  section form input {
-    width: 90%; 
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
+section form input {
+  width: 90%; /* Sets the width to 90% */
+  padding: 10px; /* Adds padding inside the input */
+  margin: 10px 0; /* Adds vertical margin */
+  border: none; /* Removes the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin-top: 20px; /* Adds top margin */
+}
+
+ /* Submit button styles */
+section form input[type="submit"] {
+  background-color: #2C3740; /* Sets the background color */
+  color: #ff0890; /* Sets the text color */
+  font-weight: bold; /* Makes the text bold */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  font-size: 15px; /* Sets the font size */
+  letter-spacing: 1px; /* Adds letter spacing */
+  margin-top: 60px; /* Adds top margin */
+}
+
   
-  /* Submit button styles */
-  section form input[type="submit"] {
-    background-color: #2C3740;
-    color: #ff0890;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 60px;
-  }
-  
-  /* Paragraph styles */
-  section p {
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: #ff0890;
-  }
-section p a{
-    color: #ff0890;
+ /* Paragraph styles */
+section p {
+  font-weight: bold; /* Makes the text bold */
+  color: #ffffff; /* Sets the text color to white */
+  text-align: center; /* Centers the text */
+  text-decoration: #ff0890; /* Sets the text decoration color */
+}
+
+/* Link styles inside paragraphs */
+section p a {
+  color: #ff0890; /* Sets the link color */
 }
 
 /* Main section styles */
-main{
-    display: flex;
-    margin: 40px;
-    flex: 1;
+main {
+  display: flex; /* Uses flexbox layout */
+  margin: 40px; /* Adds margin around the main section */
+  flex: 1; /* Allows the main section to grow and shrink */
 }
 
 /* Footer styles */
-footer{
-    text-align: center;
-    margin: 40px;
-    padding: 20px;
+footer {
+  text-align: center; /* Centers the text */
+  margin: 40px; /* Adds margin around the footer */
+  padding: 20px; /* Adds padding inside the footer */
 }
 
+
 /* Styles for small screens */
-@media screen and (max-height: 600px){
-    body{
-        overflow-y: scroll; /*Enable vertical scrolling */
+@media screen and (max-height: 600px) {
+    body {
+        overflow-y: scroll; /* Enables vertical scrolling */
     }
 }
