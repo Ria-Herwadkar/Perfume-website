@@ -61,3 +61,11 @@ cartItemsContainer.addEventListener("click", function(e) {
 
 // Render the cart initially.
 renderCart();
+
+
+
+
+
+
+
+
