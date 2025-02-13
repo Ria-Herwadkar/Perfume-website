@@ -357,7 +357,7 @@ body.dark-mode .accordion-body {
 
 body.dark-mode .nav-link.active,
 body.dark-mode .nav {
-    color: #ffad5a; /* Sets the text color */
+    color: #ffad5a !important; /* Sets the text color */
 }
 
 body.dark-mode .card {
