@@ -1,524 +1,476 @@
 /* Styles for navigation links */
-.nav-link {
-    color: #1a0841; /* Sets the text color */
+.nav-link{
+    color: #1a0841;
 }
 
-.nav-link:hover {
-    color: rgb(255, 0, 106); /* Changes the text color on hover */
+.nav-link:hover{
+    color: rgb(255, 0, 106);
 }
-
 .nav-link.active {
-    font-weight: bold; /* Makes the text bold */
-    color: #ffad5a !important; /* Sets the text color */
-    text-decoration: underline; /* Underlines the text */
-}
-
-/* Custom icon for the navbar toggler */
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28128,0,128,0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    font-weight: bold; 
+    color: #ffad5a; 
+    text-decoration: underline; 
 }
 
 /* Styles for navigation buttons */
-.nav-button button {
-    background-color: #1a0841; /* Sets the background color */
-    color: #ffad5a; /* Sets the text color */
-    border: #1a0841; /* Sets the border color */
+.nav-button button{
+    background-color: #1a0841;
+    color: #ffad5a;
+    border: #1a0841;
 }
 
-.bg-light {
-    background-color: transparent !important; /* Makes the background transparent */
-}
-
-.nav-button button:hover {
-    background-color: #f4f0fe; /* Changes the background color on hover */
-    color: #000; /* Changes the text color on hover */
+.nav-button button:hover{
+    background-color: #f4f0fe;
+    color: #000;
 }
 
 /* Styles for login and sign-up buttons */
-a.login-button, a.sign-up-button {
-    background-color: #1a0841; /* Sets the background color */
-    color: #ffad5a; /* Sets the text color */
-    border: #1a0841; /* Sets the border color */
+a.login-button, a.sign-up-button{
+    background-color: #1a0841;
+    color: #ffad5a ;
+    border: #1a0841;
 }
 
-a.login-button:hover, a.sign-up-button:hover {
-    background-color: #f4f0fe; /* Changes the background color on hover */
-    color: #000; /* Changes the text color on hover */
+a.login-button:hover, a.sign-up-button:hover{
+    background-color: #f4f0fe;
+    color: #000;
 }
 
 /* Center the about us section */
-.about-us {
-    margin: auto; /* Centers the section */
+.about-us{
+    margin: auto;
 }
 
 /* Border styles */
-.border_1 {
-    border: 1px #000 solid; /* Adds a solid border */
+.border_1{
+    border: 1px #000 solid;
 }
 
 /* Adds a bottom margin of 20px */
-.bottom_20 {
-    margin-bottom: 20px; /* Adds bottom margin */
-}
-
-.right_15 {
-    margin-right: 15px; /* Adds right margin */
-}
-
-.right_20 {
-    margin-right: 20px; /* Adds right margin */
+.bottom_20{
+    margin-bottom: 20px;
 }
 
 /* Styles for main headings */
-.heading_size {
-    font-size: 4rem; /* Sets the font size */
-    font-weight: 100; /* Sets the font weight */
-    text-align: center; /* Centers the text */
-    margin: 30px; /* Adds margin */
+.heading_size{
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 30px;
 }
 
 /* Styles for subheadings */
-.subheading_size {
-    font-size: 2rem; /* Sets the font size */
-    font-weight: 300; /* Sets the font weight */
-    letter-spacing: 1.1rem; /* Adds letter spacing */
-    margin-bottom: 20px; /* Adds bottom margin */
-    text-align: center; /* Centers the text */
+.subheading_size{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Card height 400px */
-.card_400 {
-    height: 400px; /* Sets the height */
+/* card height 400px */
+.card_400{
+    height: 400px;
 }
 
 /* Styles for card images */
-.card-img-top {
-    margin: 5px; /* Adds margin */
-    border-radius: 10px; /* Rounds the corners */
+.card-img-top{
+    margin: 5px;
+    border-radius: 10px;
 }
 
 /* Styles for about us section */
-#about {
-    margin: 25px auto; /* Centers the section and adds vertical margin */
-    width: 75%; /* Sets the width */
+#about{
+    margin: 25px auto;
+    width: 75%;
 }
 
 /* Center text in card body */
-.card-body {
-    text-align: center; /* Centers the text */
+.card-body{
+    text-align: center;
 }
 
 /* Adds a margin of 25px for card body headings */
-.card-body h5 {
-    margin: 25px; /* Adds margin */
+.card-body h5{
+    margin: 25px;
 }
 
 /* Styles for menu-card product images */
-.menu-card {
-    margin: auto; /* Centers the image */
-    height: 250px; /* Sets the height */
-    width: 250px; /* Sets the width */
+.menu-card{
+    margin: auto;
+    height: 250px;
+    width: 250px;
 }
+
 
 /* Styles for footer */
-.footer {
-    text-align: center; /* Centers the text */
-    padding: 10px; /* Adds padding */
-    margin: 5px; /* Adds margin */
+.footer{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
 }
 
-/* Home page styles */
-.home-card {
-    text-align: center; /* Centers the text */
+/* home page styles*/
+
+.home-card{
+    text-align: center;
 }
 
 .home-card a {
-    text-decoration: none; /* Removes text decoration */
-    color: #000; /* Sets the text color */
+    text-decoration: none;
+    color: #000;
 }
 
-/* Product page styles */
+
+/* product page styles */
+
 .product-image {
-    max-width: 100%; /* Sets the maximum width */
-    height: auto; /* Sets the height to auto */
-    background-color: #cec4e8; /* Sets the background color */
+    max-width: 100%;
+    height: auto;
+    background-color: #cec4e8;
 }
 
 .size-button {
-    margin-right: 10px; /* Adds right margin */
+    margin-right: 10px;
 }
 
 .quantity-input {
-    width: 40px; /* Sets the width */
-    text-align: center; /* Centers the text */
+    width: 40px;
+    text-align: center;
 }
 
 .add-to-basket-btn {
-    background-color: black; /* Sets the background color */
-    color: white; /* Sets the text color */
-    border: none; /* Removes the border */
-    padding: 10px 20px; /* Adds padding */
-    font-size: 16px; /* Sets the font size */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 .add-to-basket-btn:hover,
 .size-button:hover {
-    background-color: #cec4e8; /* Changes the background color on hover */
-    color: black; /* Changes the text color on hover */
+    background-color: #cec4e8;
+    color: black;
 }
 
 body.dark-mode .add-to-basket-btn:hover,
 body.dark-mode .size-button:hover {
-    background-color: #1a0841; /* Changes the background color on hover in dark mode */
-    color: #cec4e8; /* Changes the text color on hover in dark mode */
+    background-color: #1a0841;
+    color: #cec4e8;
 }
 
 .size-button.active {
-    background-color: black; /* Sets the background color */
-    color: white; /* Sets the text color */
+    background-color: black;
+    color: white;
 }
 
 /* Card styles */
-.card {
-    background-color: #f4f0fe; /* Sets the background color */
+.card{
+    background-color: #f4f0fe;
+    
+}
+.card a{
+    text-decoration: none;
+    color: #000;
 }
 
-.card a {
-    text-decoration: none; /* Removes text decoration */
-    color: #000; /* Sets the text color */
+.card img{
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin: auto;
 }
 
-.card img {
-    width: 350px; /* Sets the width */
-    height: 350px; /* Sets the height */
-    display: block; /* Displays the image as a block element */
-    margin: auto; /* Centers the image */
-}
-
-.add-to-basket-btn {
-    margin: 25px; /* Adds margin */
-    margin-bottom: 35px; /* Adds bottom margin */
+.add-to-basket-btn{
+    margin: 25px;
+    margin-bottom: 35px ;
 }
 
 /* Styles for gift set images */
-.gift-set {
-    width: 300px; /* Sets the width */
-    height: 300px; /* Sets the height */
+.gift-set{
+    width: 300px;
+    height: 300px;
+}
+/* contact us styles*/
+
+.form-control{
+    border: 3px solid #f4f0fe;
 }
 
-/* Contact us styles */
-.form-control {
-    border: 3px solid #f4f0fe; /* Sets the border */
+.contact-container{
+    border: 5px solid #1a0841;
+    width: 50%;
 }
 
-.contact-container {
-    border: 5px solid #1a0841; /* Sets the border */
-    width: 50%; /* Sets the width */
+.contact-container h2{
+    text-align: center;
+    margin: 15px;
+}
+.contact-container button{
+    display: block;
+    background-color: #1a0841;
+    margin: auto;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 33%;
+    padding: 10px;
 }
 
-.contact-container h2 {
-    text-align: center; /* Centers the text */
-    margin: 15px; /* Adds margin */
-}
-
-.contact-container button {
-    display: block; /* Displays the button as a block element */
-    background-color: #1a0841; /* Sets the background color */
-    color: #ffad5a; /* Sets the text color */
-    margin: auto; /* Centers the button */
-    margin-bottom: 25px; /* Adds bottom margin */
-    text-align: center; /* Centers the text */
-    width: 33%; /* Sets the width */
-    padding: 10px; /* Adds padding */
-}
-
-.contact-container button:hover {
-    background-color: #f4f0fe; /* Changes the background color on hover */
-    color: #000; /* Changes the text color on hover */
+.contact-container button:hover{
+    background-color: #f4f0fe;
+    color: #000;
 }
 
 .contact-container input:focus,
-.contact-container textarea:focus {
-    outline: 2px solid #1a0841; /* Sets the outline */
-    border-color: #1a0841; /* Sets the border color */
+.contact-container textarea:focus
+{
+    outline: 2px solid #1a0841; 
+    border-color: #1a0841;
 }
 
 /* FAQ section styles */
-#faq {
-    text-align: center; /* Centers the text */
-    margin: 15px; /* Adds margin */
+#faq{
+    text-align: center;
+    margin: 15px;
 }
-
-.accordion {
-    width: 70%; /* Sets the width */
-    display: block; /* Displays the accordion as a block element */
-    margin: auto; /* Centers the accordion */
-    margin-top: 25px; /* Adds top margin */
+.accordion{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
 }
 
 .accordion,
-.accordion-header {
-    outline: 2px solid #1a0841; /* Sets the outline */
-    border-color: #1a0841; /* Sets the border color */
-    background-color: #1a0841; /* Sets the background color */
+.accordion-header{
+    outline: 2px solid #1a0841; 
+    border-color: #1a0841;
+    background-color: #1a0841;
 }
 
 .accordion-button {
-    background-color: #f4f0fe; /* Sets the background color */
-    color: #000; /* Sets the text color */
+    background-color: #f4f0fe; 
+    color: #000; 
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #f4f0fe; /* Sets the background color */
-    color: #000; /* Sets the text color */
+    background-color: #f4f0fe; 
+    color: #000; 
 }
 
 /* Map styles */
 #map {
-    height: 400px; /* Sets the height */
-    margin: 25px; /* Adds margin */
+    height: 400px; 
+    margin: 25px;
 }
 
-/* Dark mode styles */
+
+
+/* dark mode styles*/
+
 body.dark-mode {
-    background-color: #121212; /* Sets the background color */
-    color: #f4f0fe; /* Sets the text color */
+    background-color: #121212;
+    color: #f4f0fe;
 }
 
 header {
-    transition: background-color 0.3s ease, color 0.3s ease; /* Adds transition effects */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode header {
-    border-bottom: 1px solid #444444; /* Sets the border */
+body.dark-mode header{
+    border-bottom: 1px solid #444444;
 }
 
 body.dark-mode .nav-link {
-    color: #cec4e8; /* Sets the text color */
+    color: #cec4e8;
 }
 
 body.dark-mode .nav-link:hover {
-    color: pink; /* Changes the text color on hover */
+    color: pink;
 }
 
 body.dark-mode .add-to-basket-btn {
-    background-color: #cec4e8; /* Sets the background color */
-    color: #000; /* Sets the text color */
+    background-color: #cec4e8;
+    color: #000;
 }
 
-body.dark-mode #quantity {
-    background-color: #212121; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode #quantity{
+    background-color: #212121;
+    color: #cec4e8;
 }
 
-body.dark-mode .size-button {
-    background-color: #212121; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode .size-button{
+    background-color: #212121;
+    color: #cec4e8;
 }
 
 body.dark-mode .size-button:active,
-body.dark-mode .size-button:focus {
-    background-color: #cec4e8; /* Sets the background color */
-    color: #212121; /* Sets the text color */
+body.dark-mode .size-button:focus
+{
+    background-color: #cec4e8;
+    color: #212121;
 }
 
-body.dark-mode .form-control {
-    border: 3px solid #1a0841; /* Sets the border */
+body.dark-mode .form-control{
+    border: 3px solid #1a0841;
 }
 
-body.dark-mode .contact-container {
-    border: 5px solid #cec4e8; /* Sets the border */
-    width: 50%; /* Sets the width */
+body.dark-mode .contact-container{
+    border: 5px solid #cec4e8;
+    width: 50%;
 }
 
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode input:focus,
-body.dark-mode textarea:focus {
-    background-color: #212121; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode textarea:focus{
+    background-color: #212121;
+    color: #cec4e8;
 }
 
 body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
-    color: #cec4e8; /* Sets the placeholder text color */
+    color: #cec4e8;
 }
 
 body.dark-mode .accordion,
-body.dark-mode .accordion-button {
-    background-color: #1a0841; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode .accordion-button{
+    background-color: #1a0841;
+    color: #cec4e8;
 }
 
-body.dark-mode .accordion-body {
-    background-color: #cec4e8; /* Sets the background color */
-    color: #1a0841; /* Sets the text color */
+body.dark-mode .accordion-body{
+    background-color: #cec4e8;
+    color: #1a0841;
 }
 
 body.dark-mode .nav-link.active,
-body.dark-mode .nav {
-    color: #ffad5a; /* Sets the text color */
+body.dark-mode .nav{
+    color: #ffad5a;
 }
 
-body.dark-mode .card {
-    background-color: #1a0841; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode .card{
+    background-color: #1a0841;
+    color: #cec4e8;
 }
 
 img.male-perfume,
 img.female-perfume,
-img.gift-set {
-    border-bottom: 1px solid #1a0841; /* Sets the border */
+img.gift-set{
+    border-bottom:  1px solid #1a0841;
 }
 
 body.dark-mode img.male-perfume,
 body.dark-mode img.female-perfume,
-body.dark-mode img.gift-set {
-    border-bottom: 1px solid #cec4e8; /* Sets the border */
+body.dark-mode img.gift-set{
+    border-bottom: 1px solid #cec4e8;
 }
 
 body.dark-mode .card-title,
-body.dark-mode .card-text {
-    color: #cec4e8; /* Sets the text color */
+body.dark-mode .card-text{
+    color: #cec4e8;
 }
 
 .form-check-input:checked {
-    background-color: #1a0841; /* Sets the background color */
-    border-color: #cec4e8; /* Sets the border color */
-}
+    background-color: #1a0841; 
+    border-color: #cec4e8;
+  }
 
-.form-check-input {
-    background-color: #cec4e8; /* Sets the background color */
-    border-color: #1a0841; /* Sets the border color */
-}
+  .form-check-input {
+    background-color: #cec4e8; 
+    border-color: #1a0841;
+  }
 
-/* Contact us form send email color link */
-#send_email {
-    color: hotpink; /* Sets the text color */
+  /* contact us form send email colour link */
+
+  #send_email{
+    color:hotpink
 }
 
 /* Styles for footer */
-#footer {
-    background-color: #444444; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
+
+#footer{
+    background-color: #444444;
+    color: #cec4e8;
 }
 
-.no_bg {
-    background-color: transparent; /* Makes the background transparent */
+.no_bg{
+    background-color:transparent
+  
 }
 
-.color_light {
-    color: #f4f0fe; /* Sets the text color */
-    border: none; /* Removes the border */
+.color_light{
+    color: #f4f0fe;
+    border: none;
+
 }
 
-/* Responsive styles for screens smaller than 992px */
-@media (max-width: 992px) {
-    .card-img-top {
-        margin: 0; /* Removes margin */
+/* Responsive styles for screens smaller than 1000px should be 768px */
+@media (max-width: 1000px) {
+
+    .card-img-top{
+        margin: 0;
     }
 
-    .nav-button {
-        margin-bottom: 20px; /* Adds bottom margin */
+    .nav-button{
+        margin-bottom: 20px;
     }
 
-    .contact-container {
-        width: 90%; /* Sets the width */
+    .contact-container{
+        width: 90%;
     }
 
-    body.dark-mode .contact-container {
-        width: 90%; /* Sets the width */
+    body.dark-mode .contact-container{
+        width: 90%;
     }
 
-    .accordion {
-        width: 90%; /* Sets the width */
+    .accordion{
+        width: 90%;
     }
 
-    .container header {
-        display: flex; /* Uses flexbox layout */
-        flex-direction: column; /* Arranges children in a column */
-        justify-content: center; /* Centers the content vertically */
-        align-items: center; /* Centers the content horizontally */
+    .container header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .container header ul {
-        display: flex; /* Uses flexbox layout */
-        flex-direction: column; /* Arranges children in a column */
-        justify-content: center; /* Centers the content vertically */
-        align-items: center; /* Centers the content horizontally */
+
+    .container header ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .container header button {
-        display: flex; /* Uses flexbox layout */
-        flex-direction: column; /* Arranges children in a column */
-        justify-content: center; /* Centers the content vertically */
-        align-items: center; /* Centers the content horizontally */
-        margin: 10px; /* Adds margin */
-        width: 100px; /* Sets the width */
+    .container header button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 100px;
     }
 
-    .container .heading_size {
-        text-align: center; /* Centers the text */
-        font-size: 32px; /* Sets the font size */
-        margin: 15px; /* Adds margin */
-    }
-
-    .container .subheading_size {
-        display: flex; /* Uses flexbox layout */
-        font-size: 16px; /* Sets the font size */
-        letter-spacing: 0; /* Removes letter spacing */
-        font-weight: bold; /* Makes the text bold */
-        flex-wrap: wrap; /* Allows the content to wrap */
-    }
-
-    .product-details {
-        text-align: center; /* Centers the text */
-    }
-
-    .product-details p {
-        margin: 15px; /* Adds margin */
-    }
+    .container .heading_size{
+        text-align: center; 
+        font-size: 32px;
+        margin: 15px;
 }
 
-.checkout-button {
-    background-color: #1a0841; /* Sets the background color */
-    color: #ffad5a; /* Sets the text color */
-    border: #1a0841; /* Sets the border color */
-}
+    .container .subheading_size{
+        display: flex;
+        font-size: 16px;
+        letter-spacing: 0;
+        font-weight: bold;
+        flex-wrap: wrap;
+    }
 
-.checkout-button:hover {
-    background-color: #f4f0fe; /* Changes the background color on hover */
-    color: #000; /* Changes the text color on hover */
-}
+    .product-details{
+        text-align: center;
+    }
 
-.footer a {
-    color: #cec4e8; /* Sets the text color */
-    text-decoration: none; /* Removes text decoration */
-    transition: color 0.3s ease; /* Adds a transition effect */
-}
+    .product-details p{
+        margin: 15px;
+    }
 
-.footer a:hover,
-body.dark-mode .footer a:hover {
-    color: #ffad5a; /* Changes the text color on hover */
-    text-decoration: underline; /* Underlines the text on hover */
-}
-
-body .footer,
-body .footer a {
-    background-color: #f0f0f0; /* Sets the background color */
-    color: #1a0841; /* Sets the text color */
-}
-
-body.dark-mode .footer {
-    background-color: #1d1d1d; /* Sets the background color */
-    color: #ffad5a; /* Sets the text color */
-}
-
-body.dark-mode .footer a {
-    background-color: #1d1d1d; /* Sets the background color */
-    color: #cec4e8; /* Sets the text color */
-}
-
-.dark-toggle {
-    margin: auto; /* Centers the toggle */
 }

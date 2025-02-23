@@ -15,7 +15,7 @@ function selectSize(button) {
   updatePrice();
 }
 
-// updatePrice: updates the displayed price based on the current quantity and base price.
+// updatePrice: updates the displayed price based on the current quantity and basePrice.
 function updatePrice() {
   const quantity = parseInt(document.getElementById("quantity").value);
   const totalPrice = basePrice * quantity;

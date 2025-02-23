@@ -34,7 +34,7 @@ function renderCart() {
     `;
     cartItemsContainer.appendChild(tr);
   });
-  totalAmountElement.innerText = totalAmount.toFixed(2); // Update the total amount
+  totalAmountElement.innerText = totalAmount.toFixed(2);
 }
 
 // Listen for changes in the quantity input fields.
@@ -42,10 +42,10 @@ cartItemsContainer.addEventListener("change", function(e) {
   if (e.target.classList.contains("quantity-input")) {
     const index = e.target.getAttribute("data-index");
     let newQuantity = parseInt(e.target.value);
-    if (newQuantity < 1) newQuantity = 1; // Ensure quantity is at least 1
+    if (newQuantity < 1) newQuantity = 1;
     cart[index].quantity = newQuantity;
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
-    renderCart(); // Re-render the cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
   }
 });
 
@@ -53,19 +53,11 @@ cartItemsContainer.addEventListener("change", function(e) {
 cartItemsContainer.addEventListener("click", function(e) {
   if (e.target.tagName === "BUTTON") {
     const index = e.target.getAttribute("data-index");
-    cart.splice(index, 1); // Remove the item from the cart
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
-    renderCart(); // Re-render the cart
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
   }
 });
 
 // Render the cart initially.
 renderCart();
-
-
-
-
-
-
-
-
