@@ -223,7 +223,69 @@
     <script>
       document.getElementById("submit_button").addEventListener("click", function(event) {
           event.preventDefault(); // Prevent form submission
-          console.log("Button clicked!");
+          console.log("Button clicked[!");
+
+
+          // Get the values from the form fields and trims any extra spaces
+          let fullname = document.getElementById("fullName").value.trim();
+          let email = document.getElementById("email").value.trim();
+          let phone = document.getElementById("phone").value.trim();
+          let message = document.getElementById("message").value.trim();
+
+          // Checks if the full name field is empty
+          if(document.getElementById("fullName").value == "")
+          {
+            alert("No name given"); // Alerts the user that the name field is empty
+            return; // Stops the function from running
+          }
+
+          // Checks if the email field is empty
+          if(document.getElementById("email").value == "") 
+          {
+            alert("No email given"); // Alerts the user that the email field is empty
+            return; // Stops the function from running
+          }
+
+          // Checks if the email is in the correct format
+          let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+          if(!emailPattern.test(email)) 
+          {
+            alert("Invalid email. Please enter a valid email (e.g., example@gmail.com)"); // Alerts the user that the email is invalid
+            return; // Stops the function from running
+          }
+
+          // Checks if the phone field is empty
+          if(document.getElementById("phone").value == "") 
+          {
+            alert("No number given"); // Alerts the user that the phone field is empty
+            return; // Stops the function from running
+          }
+          
+          // Checks if the phone number is in the correct format
+          let phonePattern = /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/;
+          if(!phonePattern.test(phone))
+          {
+            alert("Invalid phone number. Please enter a valid phone number (e.g., +44 7123 456 789 or 07123 456 789)"); // Alerts the user that the phone number is invalid
+            return; // Stops the function from running
+          }
+
+          // Checks if the message field is empty
+          if(document.getElementById("message").value == "")
+          {
+            alert("No message given"); // Alerts the user that the message field is empty
+            return; // Stops the function from running
+          }
+
+          // Alerts the user that the form has been submitted
+          alert("Thank you for submitting the form!");
+
+          // Clears the form fields
+          document.getElementById("fullName").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("phone").value = "";
+          document.getElementById("message").value = "";
+
+          // Logs the form values to the console
           console.log("Full Name: " + document.getElementById("fullName").value);
           console.log("Email: " + document.getElementById("email").value);
           console.log("Phone: " + document.getElementById("phone").value);
