@@ -109,8 +109,9 @@ let product_title = document.getElementById("product_title");
 let product_description = document.getElementById("product_description");
 let product_image = document.getElementById("product_image");
 let product_notes = document.getElementById("notes");
+let product_notes_page = document.getElementById("product_notes_page");
 // Check if productID and the HTML elements exist.
-if (productID && product_title && product_description && product_image && product_notes) {
+if (productID && product_title && product_description && product_image && product_notes || product_notes_page  ) {
     
 // Use a switch statement to display the product details based on the productID.
 switch (productID) {
